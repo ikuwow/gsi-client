@@ -1,0 +1,4 @@
+apiKey.txt
+urllist.txt
+results/*
+!results/.keep
