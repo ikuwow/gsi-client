@@ -29,7 +29,7 @@ else
         for url in ${URLS[@]}; do
             echo "${url}..."
             urlfile=$(echo $url | sed 's/https:\/\///' | sed 's/\//_/g')
-            curl -s -X GET "${BASEURL}?url=${url}&locale=${locale}&strategy=${strategy}&key=${APIKEY}" \
+            curl -s -X GET "${BASEURL}?url=${url}&filter_third_party_resources=${filter_third_party_resources}&locale=${locale}&strategy=${strategy}&key=${APIKEY}" \
                 > $RESULTDIR/$strategy/${urlfile}.json
         done
     done
